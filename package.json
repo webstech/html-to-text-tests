@@ -8,9 +8,10 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "install:package": "cp -p ./html-to-text/package.json ../DefinitelyTyped/types/html-to-text/ && npm install @types/html-to-text && rm ../DefinitelyTyped/types/html-to-text/package.json",
     "push:test": "cp -p html-to-text-tests.ts ../DefinitelyTyped/types/html-to-text/",
     "reinit": "npm run reinit:test && npm run reinit:package",
-    "reinit:package": "npm uninstall  @types/html-to-text --no-save && npm install @types/html-to-text",
+    "reinit:package": "npm uninstall  @types/html-to-text --no-save && npm run install:package",
     "reinit:test": "cp -p ../DefinitelyTyped/types/html-to-text/html-to-text-tests.ts ./",
     "test": "npm run build && echo 'Starting tests' && node dist/html-to-text-tests.js -"
   },
