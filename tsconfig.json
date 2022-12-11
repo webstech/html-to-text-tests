@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "moduleResolution": "Node",
+        "outDir": "./dist",
+        "noEmit": false,
+        "forceConsistentCasingInFileNames": true,
+        "explainFiles": false,
+        "listFiles": false,
+        "traceResolution": false,
+    },
+    "include": [
+        "html-to-text-tests.ts",
+    ],
+}

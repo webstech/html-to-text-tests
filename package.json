@@ -1,0 +1,23 @@
+{
+  "name": "html-to-text-tests",
+  "version": "1.0.0",
+  "description": "Tester for @types/html-to-text",
+  "main": "dist/html-to-text-tests.js",
+  "type": "module",
+  "author": "Chris. Webster <chris@webstech.net> (https://www.webstech.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "push:test": "cp -p html-to-text-tests.ts ../DefinitelyTyped/types/html-to-text/",
+    "reinit": "npm run reinit:test && npm run reinit:package",
+    "reinit:package": "npm uninstall  @types/html-to-text --no-save && npm install @types/html-to-text",
+    "reinit:test": "cp -p ../DefinitelyTyped/types/html-to-text/html-to-text-tests.ts ./",
+    "test": "npm run build && echo 'Starting tests' && node dist/html-to-text-tests.js -"
+  },
+  "devDependencies": {
+    "@types/html-to-text": "file:../DefinitelyTyped/types/html-to-text"
+  },
+  "dependencies": {
+    "html-to-text": "*"
+  }
+}
